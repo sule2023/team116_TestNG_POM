@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen Groups Calistirma">
+    <!--
+        istedgimiz gruplari toplu calistrmak icin
+        xml dosyasinda 2 hiyararsi  olustruyrz:
+        1.calisack veya calismayck grplari  belilyck hiyararsi
+        2.calistrck testlerin bulunduklari  yerleri  gosteren hiyerrsi
+        -->
+    <test name="groups calistirma">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+                <exclude name="regression1"></exclude>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day13_testNGFramework"></package>
+            <package name="tests.day14_testNGFramework_xmlFiles"></package>
+        </packages>
+    </test>
+</suite>
