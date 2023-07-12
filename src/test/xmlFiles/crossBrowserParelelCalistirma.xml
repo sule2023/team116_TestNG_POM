@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Cross Browser calistirma" parallel="tests" thread-count="2">
+    <!--
+    kac farkli  browser kullancksak her biri icin test tagi  itibaren cslisck testleri yazmalisn
+    her testin altina parametr kullamarak istenen brwser yaz
+    -->
+    <test name="Chrome ile calisacak testler">
+        <parameter name="browser" value="chrome"></parameter>
+        
+       <classes>
+           <class name="tests.day15_crossBrowserTestler.C01_AmazonSearch"></class>
+           <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
+       </classes>
+
+    </test>
+    <test name="Edge">
+        <parameter name="browser" value="edge"></parameter>
+      <classes>
+          <class name="tests.day15_crossBrowserTestler.C02_AlertsTesti"></class>
+      </classes>
+        
+
+
+    </test>
+
+
+
+</suite>
